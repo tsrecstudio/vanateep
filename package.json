@@ -1,0 +1,23 @@
+{
+  "name": "telegram-rent-app",
+  "version": "1.0.0",
+  "description": "Telegram Mini App для аренды транспорта и недвижимости",
+  "main": "index.html",  "scripts": {
+    "start": "npx http-server -p 8000 -o",
+    "serve": "npx http-server -p 8000",
+    "dev": "npx http-server -p 8000 -o -c-1"
+  },
+  "keywords": [
+    "telegram",
+    "mini-app",
+    "rent",
+    "rental"
+  ],
+  "author": "Your Name",
+  "license": "MIT",  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}

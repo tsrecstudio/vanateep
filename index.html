@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentWorld - Аренда в мире</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 RentWorld</h1>
+            <p>Аренда мотоциклов, машин и квартир по всему миру</p>
+        </header>
+
+        <div class="city-selector">
+            <label for="city">Выберите город:</label>
+            <select id="city" onchange="loadItems()">
+                <option value="">Выберите город</option>
+                <option value="moscow">Москва</option>
+                <option value="spb">Санкт-Петербург</option>
+                <option value="paris">Париж</option>
+                <option value="london">Лондон</option>
+                <option value="tokyo">Токио</option>
+                <option value="nyc">Нью-Йорк</option>
+            </select>
+        </div>
+
+        <div class="category-tabs">
+            <button class="tab-btn active" onclick="switchCategory('motorcycles')">🏍️ Мотоциклы</button>
+            <button class="tab-btn" onclick="switchCategory('cars')">🚗 Машины</button>
+            <button class="tab-btn" onclick="switchCategory('apartments')">🏠 Квартиры</button>
+        </div>
+
+        <div id="items-grid" class="items-grid">
+            <div class="placeholder">
+                Выберите город для просмотра доступных вариантов
+            </div>
+        </div>
+
+        <div id="cart" class="cart hidden">
+            <h3>Корзина</h3>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Итого: <span id="total">0</span> ₽</strong>
+            </div>
+            <button class="rent-btn" onclick="processRent()">Арендовать</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
